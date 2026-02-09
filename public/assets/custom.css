@@ -1,102 +1,449 @@
-/* ===== macOS Liquid Glass Dashboard ===== */
+/* ===============================================
+   LIQUID GLASS THEME - Custom CSS for Homer
+   =============================================== */
 
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===============================================
+   ROOT VARIABLES & GLOBAL STYLES
+   =============================================== */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-hover: rgba(255, 255, 255, 0.08);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8d1;
+  --accent-color: #3daee9;
+  --accent-hover: #67c7ff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --backdrop-blur: 20px;
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ===============================================
+   BODY & BACKGROUND
+   =============================================== */
 body {
-  background: #1c1c1e; /* macOS graphite */
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
-               "Segoe UI", sans-serif;
-  color: #f2f2f7;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
 }
 
-/* ===== HEADER ===== */
-
-.hero {
-  background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 20px 0 !important;
+/* Animated background effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(58, 123, 213, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(138, 58, 185, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(30, 144, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.hero h1 {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-align: center;
+#app {
+  position: relative;
+  z-index: 1;
 }
 
-.hero p {
-  color: #a1a1aa !important;
-  text-align: center;
+/* ===============================================
+   HEADER SECTION
+   =============================================== */
+#main-section {
+  background: transparent !important;
 }
 
-/* ===== GLASS CARDS ===== */
+.first-line {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+  box-shadow: 0 8px 32px 0 var(--shadow-color) !important;
+  padding: 2rem 1rem !important;
+}
 
-.card {
+.first-line .headline {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.first-line .subtitle {
+  color: var(--text-secondary) !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+  opacity: 0.9;
+  font-family: 'Monaco', 'Courier New', monospace !important;
+}
+
+/* Logo styling */
+.logo {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================================
+   NAVBAR & LINKS
+   =============================================== */
+.navbar {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.navbar-item {
+  color: var(--text-primary) !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+  border-radius: 8px !important;
+  margin: 0 0.25rem !important;
+}
+
+.navbar-item:hover {
+  background: var(--glass-hover) !important;
+  transform: translateY(-2px);
+  color: var(--accent-hover) !important;
+}
+
+.navbar-item i {
+  margin-right: 0.5rem;
+}
+
+/* Search bar */
+#search {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) !important;
+  border-radius: 12px !important;
+  color: var(--text-primary) !important;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+#search:focus {
   background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(30px);
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.35);
-  transition: all 0.25s ease;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 3px rgba(61, 174, 233, 0.1) !important;
+  outline: none !important;
+}
+
+#search::placeholder {
+  color: var(--text-secondary) !important;
+  opacity: 0.6;
+}
+
+/* ===============================================
+   CARDS & SERVICE SECTIONS
+   =============================================== */
+.container {
+  background: transparent !important;
+}
+
+/* Section titles */
+.group-title {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+  margin: 2rem 0 1rem !important;
+  padding-left: 0.5rem !important;
+  border-left: 3px solid var(--accent-color) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.group-title i {
+  margin-right: 0.75rem;
+  color: var(--accent-color);
+}
+
+/* Service cards */
+.card {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 var(--shadow-color) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px) scale(1.01);
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: var(--glass-hover) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 
+    0 12px 40px 0 rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1) !important;
 }
 
-/* ===== SECTION TITLES ===== */
-
-.section-title {
-  color: #d4d4d8 !important;
-  font-weight: 600;
-  margin-bottom: 16px;
+.card:hover::before {
+  opacity: 1;
 }
 
-/* ===== ICONS ===== */
-
-.card .media img {
-  transition: transform 0.2s ease;
+/* Card content */
+.card-content {
+  padding: 1.5rem !important;
 }
 
-.card:hover .media img {
-  transform: scale(1.08);
+.media {
+  margin: 0 !important;
+  align-items: center !important;
 }
 
-/* ===== SEARCH BAR ===== */
-
-.search {
-  margin-top: 12px;
+.media-left {
+  margin-right: 1rem !important;
 }
 
-input[type="search"],
-input[type="text"] {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: #f2f2f7 !important;
-  border-radius: 18px;
-  padding: 14px;
-  backdrop-filter: blur(30px);
+.media-left img {
+  border-radius: 10px !important;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  max-width: 48px !important;
+  max-height: 48px !important;
 }
 
-input:focus {
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+.card:hover .media-left img {
+  transform: scale(1.1) rotate(5deg);
 }
 
-/* ===== FADE-IN ANIMATION ===== */
-
-.card {
-  animation: floatIn 0.45s ease both;
+/* Service title and subtitle */
+.title {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 0.25rem !important;
+  transition: color 0.3s ease;
 }
 
-@keyframes floatIn {
+.card:hover .title {
+  color: var(--accent-hover) !important;
+}
+
+.subtitle {
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  opacity: 0.8;
+}
+
+/* Tags */
+.tag {
+  background: rgba(61, 174, 233, 0.15) !important;
+  color: var(--accent-color) !important;
+  border: 1px solid rgba(61, 174, 233, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 0.35rem 0.75rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+}
+
+/* ===============================================
+   MESSAGE & STATUS
+   =============================================== */
+.message {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 16px 0 var(--shadow-color) !important;
+}
+
+.message-header {
+  background: rgba(61, 174, 233, 0.15) !important;
+  color: var(--text-primary) !important;
+  border-radius: 12px 12px 0 0 !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.message-body {
+  background: transparent !important;
+  border: none !important;
+  color: var(--text-secondary) !important;
+}
+
+/* ===============================================
+   SCROLLBAR CUSTOMIZATION
+   =============================================== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+  background-clip: padding-box;
+}
+
+/* ===============================================
+   FOOTER
+   =============================================== */
+footer {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  padding: 2rem 0 !important;
+}
+
+/* ===============================================
+   OFFLINE INDICATOR
+   =============================================== */
+.offline-message {
+  background: rgba(255, 59, 48, 0.15) !important;
+  border: 1px solid rgba(255, 59, 48, 0.3) !important;
+  backdrop-filter: blur(var(--backdrop-blur)) !important;
+  color: #ff6b6b !important;
+  border-radius: 12px !important;
+}
+
+/* ===============================================
+   RESPONSIVE ADJUSTMENTS
+   =============================================== */
+@media (max-width: 768px) {
+  .first-line .headline {
+    font-size: 2rem !important;
+  }
+  
+  .first-line .subtitle {
+    font-size: 0.95rem !important;
+  }
+  
+  .group-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .card {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* ===============================================
+   ANIMATIONS
+   =============================================== */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ===============================================
+   GLASS SHINE EFFECT
+   =============================================== */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.card:hover::after {
+  left: 100%;
+}
+
+/* ===============================================
+   DARK MODE TOGGLE (if enabled)
+   =============================================== */
+.navbar-item.is-inline-block-mobile {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-item.is-inline-block-mobile:hover {
+  background: var(--glass-hover) !important;
+}
+
+/* ===============================================
+   SERVICE GRID LAYOUT
+   =============================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ===============================================
+   CUSTOM LINK STYLING
+   =============================================== */
+a {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+a:hover {
+  color: var(--accent-hover) !important;
 }
