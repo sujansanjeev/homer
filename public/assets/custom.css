@@ -1,90 +1,92 @@
-/* NeoVim Terminal Theme */
+/* ===== NeoVim Clean Professional Theme ===== */
 
 body {
-  background: #0d1117 !important;
-  font-family: "JetBrains Mono", monospace;
-}
-
-/* Cards */
-.card {
-  background: #161b22 !important;
-  border: 1px solid #00ff9c33;
-  box-shadow: 0 0 10px #00ff9c11;/* ===== NeoVim Professional Theme (Refined) ===== */
-
-body {
-  background: #0d1117 !important;
+  background: #0b0f14 !important;
   font-family: "JetBrains Mono", monospace;
   color: #e6edf3;
 }
 
-/* Header / Title Bar */
+/* ===== HEADER FIX ===== */
+
+/* Remove bright green bar */
 .hero {
-  background: #0d1117 !important;
-  border-bottom: 1px solid #00ff9c22;
+  background: #0b0f14 !important;
+  border-bottom: 1px solid #1f2933;
+  padding: 12px 0 !important;
 }
 
+/* Title styling */
 .hero h1 {
   color: #00ff9c !important;
-  font-weight: 600;
+  font-size: 20px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
-/* Search Bar Fix */
+/* Subtitle */
+.hero p {
+  color: #6b7280 !important;
+  text-align: center;
+}
+
+/* ===== SEARCH BAR ===== */
+
+.search {
+  margin-top: 10px;
+}
+
 input[type="search"],
 input[type="text"] {
-  background: #161b22 !important;
-  border: 1px solid #00ff9c33 !important;
+  background: #11161d !important;
+  border: 1px solid #1f2933 !important;
   color: #e6edf3 !important;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px;
 }
 
 input[type="search"]:focus,
 input[type="text"]:focus {
   border: 1px solid #00ff9c !important;
-  box-shadow: 0 0 8px #00ff9c44;
+  box-shadow: 0 0 8px #00ff9c33;
   outline: none;
 }
 
-/* Cards */
-.card {
-  background: #161b22 !important;
-  border: 1px solid #00ff9c22;
-  box-shadow: 0 0 6px #00ff9c11;
-  tran
+/* ===== CARDS ===== */
 
+.card {
+  background: #11161d !important;
+  border: 1px solid #1f2933;
+  border-radius: 14px;
   transition: all 0.2s ease-in-out;
 }
 
-/* Hover glow */
 .card:hover {
   border: 1px solid #00ff9c;
-  box-shadow: 0 0 20px #00ff9c55;
-  transform: translateY(-3px);
+  box-shadow: 0 0 12px #00ff9c33;
+  transform: translateY(-2px);
 }
 
-/* Title styling */
-h1, h2, h3 {
-  color: #00ff9c !important;
-  letter-spacing: 1px;
+/* ===== SECTION TITLES ===== */
+
+.section-title {
+  color: #22d3ee !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-/* Icons */
+/* ===== ICON GLOW ===== */
+
 .card .media img {
-  filter: drop-shadow(0 0 4px #00ff9c88);
+  filter: drop-shadow(0 0 3px #00ff9c55);
 }
 
-/* Section icons */
-.section-title i {
-  color: #00bcd4 !important;
-}
+/* ===== SMOOTH ANIMATION ===== */
 
-/* Smooth animations */
 .card {
-  animation: fadeIn 0.4s ease-in;
+  animation: fadeIn 0.3s ease-in;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
+  from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
