@@ -1,0 +1,86 @@
+title: "Sujan’s Browser"
+subtitle: "cd ~/_" 
+
+header: true
+footer: false
+
+theme: dark
+
+colors:
+  dark:
+    highlight-primary: "#22c55e"
+    highlight-secondary: "#3b82f6"
+
+services:
+
+  - name: Search
+    icon: fas fa-search
+    items:
+      - name: Google Search
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg
+        url: https://www.google.com
+      - name: DuckDuckGo
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/duckduckgo.svg
+        url: https://duckduckgo.com
+
+  - name: Work
+    icon: fas fa-briefcase
+    items:
+      - name: Gmail
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg
+        url: https://mail.google.com
+      - name: Outlook
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftoutlook.svg
+        url: https://outlook.office.com
+
+  - name: Dev
+    icon: fas fa-code
+    items:
+      - name: GitHub
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg
+        url: https://github.com
+      - name: Hugging Face
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg
+        url: https://huggingface.co
+      - name: DevDocs
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/devdocs.svg
+        url: https://devdocs.io
+
+  - name: AI
+    icon: fas fa-robot
+    items:
+      - name: ChatGPT
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg
+        url: https://chat.openai.com
+      - name: Claude
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg
+        url: https://claude.ai
+      - name: Perplexity
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/perplexity.svg
+        url: https://perplexity.com
+
+  - name: Play
+    icon: fas fa-play
+    items:
+      - name: YouTube
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg
+        url: https://youtube.com
+      - name: Prime Video
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg
+        url: https://primevideo.com
+      - name: Netflix
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg
+        url: https://netflix.com
+
+  - name: Social
+    icon: fas fa-users
+    items:
+      - name: Twitter
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg
+        url: https://twitter.com
+      - name: Reddit
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg
+        url: https://reddit.com
+      - name: Instagram
+        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg
+        url: https://instagram.com
