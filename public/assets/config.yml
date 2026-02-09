@@ -5,11 +5,15 @@ header: true
 footer: false
 
 theme: dark
-
 colors:
   dark:
-    highlight-primary: "#22c55e"
-    highlight-secondary: "#3b82f6"
+    highlight-primary: "#00ff9c"
+    highlight-secondary: "#00bcd4"
+    highlight-hover: "#00e676"
+    background: "#0d1117"
+    card-background: "#161b22"
+    text: "#e6edf3"
+
 
 services:
 
