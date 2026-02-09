@@ -5,6 +5,8 @@ header: true
 footer: false
 
 theme: dark
+stylesheet:
+  - assets/custom.css
 colors:
   dark:
     highlight-primary: "#00ff9c"
@@ -88,3 +90,4 @@ services:
       - name: Instagram
         logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg
         url: https://instagram.com
+
