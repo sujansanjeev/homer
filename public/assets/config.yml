@@ -86,4 +86,21 @@ services:
       - name: Instagram
         logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg
         url: https://instagram.com
+  - name: Feeds
+    icon: fas fa-rss
+    items:
+      - name: Hacker News
+        type: rss
+        url: https://hnrss.org/frontpage
+        limit: 5
+
+      - name: Reddit /r/technology
+        type: rss
+        url: https://www.reddit.com/r/technology/.rss
+        limit: 5
+
+      - name: The Verge
+        type: rss
+        url: https://www.theverge.com/rss/index.xml
+        limit: 5
 
