@@ -48,9 +48,6 @@ services:
       - name: Hugging Face
         logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg
         url: https://huggingface.co
-      - name: DevDocs
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/devdocs.svg
-        url: https://devdocs.io
 
   - name: AI
     icon: fas fa-robot
