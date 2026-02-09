@@ -1,72 +1,66 @@
-/* ===== NeoGlass Terminal Dashboard ===== */
+/* ===== macOS Liquid Glass Dashboard ===== */
 
 body {
-  background: linear-gradient(135deg, #0a0f1c, #05080f);
-  font-family: "JetBrains Mono", monospace;
-  color: #e5e7eb;
+  background: #1c1c1e; /* macOS graphite */
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+               "Segoe UI", sans-serif;
+  color: #f2f2f7;
 }
 
 /* ===== HEADER ===== */
 
 .hero {
-  background: rgba(10, 15, 28, 0.6) !important;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 255, 156, 0.15);
-  padding: 18px 0 !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px 0 !important;
 }
 
 .hero h1 {
-  color: #00ff9c !important;
-  font-size: 22px;
-  letter-spacing: 1.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-align: center;
-  text-shadow: 0 0 10px rgba(0, 255, 156, 0.4);
 }
 
 .hero p {
-  color: #6b7280 !important;
+  color: #a1a1aa !important;
   text-align: center;
 }
 
 /* ===== GLASS CARDS ===== */
 
 .card {
-  background: rgba(20, 25, 40, 0.45) !important;
-  backdrop-filter: blur(14px);
-  border-radius: 16px;
-  border: 1px solid rgba(0, 255, 156, 0.12);
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(30px);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35);
   transition: all 0.25s ease;
   overflow: hidden;
 }
 
-/* Glow hover effect */
-
 .card:hover {
-  border: 1px solid rgba(0, 255, 156, 0.5);
-  box-shadow:
-    0 8px 30px rgba(0, 255, 156, 0.15),
-    0 0 20px rgba(0, 255, 156, 0.2);
   transform: translateY(-4px) scale(1.01);
+  background: rgba(255, 255, 255, 0.12) !important;
 }
 
 /* ===== SECTION TITLES ===== */
 
 .section-title {
-  color: #22d3ee !important;
+  color: #d4d4d8 !important;
   font-weight: 600;
-  letter-spacing: 0.7px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
-/* ===== ICON STYLING ===== */
+/* ===== ICONS ===== */
 
 .card .media img {
-  filter: drop-shadow(0 0 6px rgba(0, 255, 156, 0.5));
   transition: transform 0.2s ease;
 }
 
 .card:hover .media img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 /* ===== SEARCH BAR ===== */
@@ -77,31 +71,29 @@ body {
 
 input[type="search"],
 input[type="text"] {
-  background: rgba(15, 20, 35, 0.6) !important;
-  border: 1px solid rgba(0, 255, 156, 0.15) !important;
-  color: #e5e7eb !important;
-  border-radius: 12px;
-  padding: 12px;
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #f2f2f7 !important;
+  border-radius: 18px;
+  padding: 14px;
+  backdrop-filter: blur(30px);
 }
 
-input[type="search"]:focus,
-input[type="text"]:focus {
-  border: 1px solid #00ff9c !important;
-  box-shadow: 0 0 12px rgba(0, 255, 156, 0.35);
+input:focus {
   outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 /* ===== FADE-IN ANIMATION ===== */
 
 .card {
-  animation: fadeUp 0.4s ease both;
+  animation: floatIn 0.45s ease both;
 }
 
-@keyframes fadeUp {
+@keyframes floatIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
