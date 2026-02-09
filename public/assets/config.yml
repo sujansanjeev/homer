@@ -1,106 +1,191 @@
-title: "Sujan’s Browser"
-subtitle: "cd ~/_" 
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+title: "Welcome, Sujan Sanjeev"
+subtitle: "cd ~/Dashboard"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
 footer: false
 
-theme: dark
-stylesheet:
-  - assets/custom.css
+# Optional theme customization
+theme: default
 colors:
+  light:
+    highlight-primary: "rgba(255, 255, 255, 0.1)"
+    highlight-secondary: "rgba(255, 255, 255, 0.05)"
+    highlight-hover: "rgba(255, 255, 255, 0.15)"
+    background: "#0f0f1e"
+    card-background: "rgba(255, 255, 255, 0.05)"
+    text: "#ffffff"
+    text-header: "#ffffff"
+    text-title: "#ffffff"
+    text-subtitle: "#b8b8d1"
+    card-shadow: "rgba(0, 0, 0, 0.5)"
+    link: "#3daee9"
+    link-hover: "#67c7ff"
   dark:
-    highlight-primary: "#00ff9c"
-    highlight-secondary: "#22d3ee"
-    background: "#05080f"
-    card-background: "#141928"
-    text: "#e5e7eb"
+    highlight-primary: "rgba(255, 255, 255, 0.1)"
+    highlight-secondary: "rgba(255, 255, 255, 0.05)"
+    highlight-hover: "rgba(255, 255, 255, 0.15)"
+    background: "#0f0f1e"
+    card-background: "rgba(255, 255, 255, 0.05)"
+    text: "#ffffff"
+    text-header: "#ffffff"
+    text-title: "#ffffff"
+    text-subtitle: "#b8b8d1"
+    card-shadow: "rgba(0, 0, 0, 0.5)"
+    link: "#3daee9"
+    link-hover: "#67c7ff"
 
+# Optional navbar
+links:
+  - name: "Portfolio"
+    icon: "fas fa-user"
+    url: "https://sujanbrowser.netlify.app/"
+    target: "_blank"
+  - name: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/sujansanjeev"
+    target: "_blank"
 
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-
-  - name: Search
-    icon: fas fa-search
+  - name: "Work"
+    icon: "fas fa-briefcase"
     items:
-      - name: Google Search
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg
-        url: https://www.google.com
-      - name: DuckDuckGo
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/duckduckgo.svg
-        url: https://duckduckgo.com
+      - name: "Gmail"
+        logo: "https://www.google.com/gmail/about/static-2.0/images/logo-gmail.png"
+        subtitle: "Email"
+        tag: "mail"
+        keywords: "email mail"
+        url: "https://gmail.com"
+        target: "_blank"
+        
+      - name: "Outlook"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/512px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png"
+        subtitle: "Office Mail"
+        tag: "mail"
+        keywords: "email office"
+        url: "https://outlook.office.com"
+        target: "_blank"
+        
+      - name: "LinkedIn"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+        subtitle: "Professional Network"
+        tag: "social"
+        keywords: "professional network"
+        url: "https://linkedin.com"
+        target: "_blank"
 
-  - name: Work
-    icon: fas fa-briefcase
+  - name: "Dev"
+    icon: "fas fa-code"
     items:
-      - name: Gmail
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg
-        url: https://mail.google.com
-      - name: Outlook
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftoutlook.svg
-        url: https://outlook.office.com
+      - name: "GitHub"
+        logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        subtitle: "Code Repository"
+        tag: "dev"
+        keywords: "git code repository"
+        url: "https://github.com/"
+        target: "_blank"
+        
+      - name: "Hugging Face"
+        logo: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+        subtitle: "AI Models"
+        tag: "dev"
+        keywords: "ai models ml"
+        url: "https://huggingface.co/"
+        target: "_blank"
+        
+      - name: "DevDocs"
+        logo: "https://devdocs.io/images/apple-icon-152.png"
+        subtitle: "API Documentation"
+        tag: "dev"
+        keywords: "docs api documentation"
+        url: "https://devdocs.io/"
+        target: "_blank"
 
-  - name: Dev
-    icon: fas fa-code
+  - name: "AI"
+    icon: "fas fa-brain"
     items:
-      - name: GitHub
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg
-        url: https://github.com
-      - name: Hugging Face
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/huggingface.svg
-        url: https://huggingface.co
+      - name: "ChatGPT"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+        subtitle: "OpenAI Assistant"
+        tag: "ai"
+        keywords: "ai chatbot openai"
+        url: "https://chatgpt.com/"
+        target: "_blank"
+        
+      - name: "Claude"
+        logo: "https://claude.ai/images/claude_app_icon.png"
+        subtitle: "Anthropic Assistant"
+        tag: "ai"
+        keywords: "ai chatbot anthropic"
+        url: "https://claude.ai/"
+        target: "_blank"
+        
+      - name: "Perplexity"
+        logo: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/perplexity-ai-icon.png"
+        subtitle: "AI Search"
+        tag: "ai"
+        keywords: "ai search"
+        url: "https://perplexity.com/"
+        target: "_blank"
 
-  - name: AI
-    icon: fas fa-robot
+  - name: "Play"
+    icon: "fas fa-play-circle"
     items:
-      - name: ChatGPT
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg
-        url: https://chat.openai.com
-      - name: Claude
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anthropic.svg
-        url: https://claude.ai
-      - name: Perplexity
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/perplexity.svg
-        url: https://perplexity.com
+      - name: "YouTube"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/512px-YouTube_full-color_icon_%282017%29.svg.png"
+        subtitle: "Video Platform"
+        tag: "media"
+        keywords: "video streaming"
+        url: "https://youtube.com/"
+        target: "_blank"
+        
+      - name: "Prime Video"
+        logo: "https://images-na.ssl-images-amazon.com/images/G/01/digital/video/web/Logo-min.png"
+        subtitle: "Amazon Streaming"
+        tag: "media"
+        keywords: "streaming movies shows"
+        url: "https://primevideo.com/"
+        target: "_blank"
+        
+      - name: "Netflix"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png"
+        subtitle: "Streaming Service"
+        tag: "media"
+        keywords: "streaming movies shows"
+        url: "https://netflix.com/"
+        target: "_blank"
 
-  - name: Play
-    icon: fas fa-play
+  - name: "Social"
+    icon: "fas fa-users"
     items:
-      - name: YouTube
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg
-        url: https://youtube.com
-      - name: Prime Video
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/primevideo.svg
-        url: https://primevideo.com
-      - name: Netflix
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netflix.svg
-        url: https://netflix.com
-
-  - name: Social
-    icon: fas fa-users
-    items:
-      - name: Twitter
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg
-        url: https://twitter.com
-      - name: Reddit
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg
-        url: https://reddit.com
-      - name: Instagram
-        logo: https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg
-        url: https://instagram.com
-  - name: Feeds
-    icon: fas fa-rss
-    items:
-      - name: Hacker News
-        type: rss
-        url: https://hnrss.org/frontpage
-        limit: 5
-
-      - name: Reddit /r/technology
-        type: rss
-        url: https://www.reddit.com/r/technology/.rss
-        limit: 5
-
-      - name: The Verge
-        type: rss
-        url: https://www.theverge.com/rss/index.xml
-        limit: 5
-
+      - name: "Twitter"
+        logo: "https://abs.twimg.com/responsive-web/client-web/icon-ios.77d25eba.png"
+        subtitle: "Social Network"
+        tag: "social"
+        keywords: "social network tweets"
+        url: "https://twitter.com/"
+        target: "_blank"
+        
+      - name: "Reddit"
+        logo: "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png"
+        subtitle: "Community Platform"
+        tag: "social"
+        keywords: "forum community"
+        url: "https://reddit.com/"
+        target: "_blank"
+        
+      - name: "Instagram"
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/512px-Instagram_logo_2016.svg.png"
+        subtitle: "Photo Sharing"
+        tag: "social"
+        keywords: "photos social"
+        url: "https://instagram.com/"
+        target: "_blank"
