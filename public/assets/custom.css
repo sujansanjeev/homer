@@ -9,7 +9,50 @@ body {
 .card {
   background: #161b22 !important;
   border: 1px solid #00ff9c33;
-  box-shadow: 0 0 10px #00ff9c11;
+  box-shadow: 0 0 10px #00ff9c11;/* ===== NeoVim Professional Theme (Refined) ===== */
+
+body {
+  background: #0d1117 !important;
+  font-family: "JetBrains Mono", monospace;
+  color: #e6edf3;
+}
+
+/* Header / Title Bar */
+.hero {
+  background: #0d1117 !important;
+  border-bottom: 1px solid #00ff9c22;
+}
+
+.hero h1 {
+  color: #00ff9c !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Search Bar Fix */
+input[type="search"],
+input[type="text"] {
+  background: #161b22 !important;
+  border: 1px solid #00ff9c33 !important;
+  color: #e6edf3 !important;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input[type="search"]:focus,
+input[type="text"]:focus {
+  border: 1px solid #00ff9c !important;
+  box-shadow: 0 0 8px #00ff9c44;
+  outline: none;
+}
+
+/* Cards */
+.card {
+  background: #161b22 !important;
+  border: 1px solid #00ff9c22;
+  box-shadow: 0 0 6px #00ff9c11;
+  tran
+
   transition: all 0.2s ease-in-out;
 }
 
