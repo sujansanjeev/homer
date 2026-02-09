@@ -1,0 +1,47 @@
+/* NeoVim Terminal Theme */
+
+body {
+  background: #0d1117 !important;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Cards */
+.card {
+  background: #161b22 !important;
+  border: 1px solid #00ff9c33;
+  box-shadow: 0 0 10px #00ff9c11;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover glow */
+.card:hover {
+  border: 1px solid #00ff9c;
+  box-shadow: 0 0 20px #00ff9c55;
+  transform: translateY(-3px);
+}
+
+/* Title styling */
+h1, h2, h3 {
+  color: #00ff9c !important;
+  letter-spacing: 1px;
+}
+
+/* Icons */
+.card .media img {
+  filter: drop-shadow(0 0 4px #00ff9c88);
+}
+
+/* Section icons */
+.section-title i {
+  color: #00bcd4 !important;
+}
+
+/* Smooth animations */
+.card {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
